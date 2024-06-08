@@ -1,0 +1,8 @@
+CREATE TABLE notebooks (
+    id NVARCHAR(36) PRIMARY KEY,
+    title NVARCHAR(255) NOT NULL,
+    body NVARCHAR(MAX) NOT NULL,
+    createdAt NVARCHAR(50) NOT NULL
+);
+
+SELECT * FROM notebooks;

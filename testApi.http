@@ -1,0 +1,26 @@
+### Create a Notebook
+POST http://localhost:3000/api/notebooks
+Content-Type: application/json
+
+{
+    "title": "Sample Notebook",
+    "body": "This is the body of the sample notebook."
+}
+
+### Fetch All Notebooks
+GET http://localhost:3000/api/notebooks
+
+### Fetch a Notebook by ID
+GET http://localhost:3000/api/notebooks/{id}
+
+### Update a Notebook by ID
+PUT http://localhost:3000/api/notebooks/{id}
+Content-Type: application/json
+
+{
+    "title": "Updated Title",
+    "body": "Updated body of the notebook."
+}
+
+### Delete a Notebook by ID
+DELETE http://localhost:3000/api/notebooks/{id}
