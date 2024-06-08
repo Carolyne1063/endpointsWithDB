@@ -3,7 +3,7 @@ POST http://localhost:3000/api/notebooks
 Content-Type: application/json
 
 {
-    "title": "Sample Notebook",
+    "title": "Sample Notebook 2",
     "body": "This is the body of the sample notebook."
 }
 

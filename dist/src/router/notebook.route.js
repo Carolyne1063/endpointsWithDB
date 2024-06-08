@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const notebook_contoller_1 = require("../controller/notebook.contoller");
+const router = (0, express_1.Router)();
+router.post('/notebooks', notebook_contoller_1.createNotebookController);
+router.put('/notebooks/:id', notebook_contoller_1.updateNotebookController);
+router.delete('/notebooks/:id', notebook_contoller_1.deleteNotebookController);
+router.get('/notebooks', notebook_contoller_1.fetchAllNotebooksController);
+router.get('/notebooks/:id', notebook_contoller_1.fetchNotebookByIdController);
+exports.default = router;
