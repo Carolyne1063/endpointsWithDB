@@ -11,10 +11,10 @@ Content-Type: application/json
 GET http://localhost:3000/api/notebooks
 
 ### Fetch a Notebook by ID
-GET http://localhost:3000/api/notebooks/{id}
+GET http://localhost:3000/api/notebooks/25d5656e-2a8e-4317-bf7a-1d0b58de9d5b
 
 ### Update a Notebook by ID
-PUT http://localhost:3000/api/notebooks/{id}
+PUT http://localhost:3000/api/notebooks/25d5656e-2a8e-4317-bf7a-1d0b58de9d5b
 Content-Type: application/json
 
 {
@@ -23,4 +23,4 @@ Content-Type: application/json
 }
 
 ### Delete a Notebook by ID
-DELETE http://localhost:3000/api/notebooks/{id}
+DELETE http://localhost:3000/api/notebooks/ede90420-78a4-45b2-8b8e-7c5638a4be4c
