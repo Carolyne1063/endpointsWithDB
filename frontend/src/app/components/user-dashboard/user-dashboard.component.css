@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.whole-container{
+    display: flex;
+    gap: 20px;
+    height: auto;
+}
+.sidebar{
+    width: 20vw;
+    height: auto;
+    background:linear-gradient(rgb(234, 6, 131),purple);
+}
+.profile, .user, .logout{
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    color: 0px 0px 28px rgba(0, 0, 0, .08);
+    font-size: 20px;
+    font-weight: 400;
+}
+.profile:hover, .logout:hover{
+    background-color: white;
+    color: rgb(234, 6, 131);
+    cursor: pointer;
+}
+.container{
+    width: 80vw;
+    height: auto;
+    background-color: aliceblue;
+    color: black;
+    padding: 30px;
+}
+select{
+    margin-left: 200px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.welcome-image img{
+    margin-left: 150px;
+    width: 600px;
+    height: 200px;
+}
+button{
+    background-color: rgb(234, 6, 131);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+.note-cards{
+    display: flex;
+    gap: 12px;
+}
+.note-card{
+    background-color: white;
+    width: 300px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.note-card-buttons{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.note-card button{
+    background-color: rgb(234, 6, 131);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}

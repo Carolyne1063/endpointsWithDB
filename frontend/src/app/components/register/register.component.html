@@ -1,0 +1,40 @@
+<h1>Register</h1>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+  <div class="form-control">
+    <label for="firstName">First Name</label>
+    <input formControlName="firstName" type="text">
+    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+      <small *ngIf="firstName.errors?.['required']">First Name is required.</small>
+    </div>
+  </div>
+  <br><br>
+  <div class="form-control">
+    <label for="lastName">Last Name</label>
+    <input formControlName="lastName" type="text">
+    <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+      <small *ngIf="lastName.errors?.['required']">Last Name is required.</small>
+    </div>
+  </div>
+  <br><br>
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input formControlName="email" type="text">
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+      <small *ngIf="email.errors?.['required']">Email is required.</small>
+      <small *ngIf="email.errors?.['email']">Enter a valid email.</small>
+    </div>
+  </div>
+  <br><br>
+  <div class="form-control">
+    <label for="password">Password</label>
+    <input formControlName="password" type="password">
+    <div *ngIf="password.invalid && (password.dirty || password.touched)">
+      <small *ngIf="password.errors?.['required']">Password is required.</small>
+      <small *ngIf="password.errors?.['minlength']">Password must be at least 6 characters long.</small>
+    </div>
+  </div>
+  <br><br>
+  <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  <br>
+  <p>Already have an account?<a href="/login"><span>Login</span></a></p>
+</form>

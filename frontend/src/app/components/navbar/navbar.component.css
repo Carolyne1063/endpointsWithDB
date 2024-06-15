@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+    background-color: white;
+    color: rgb(234, 6, 131);
+    border: 2px solid rgb(234, 6, 131);
+    border-radius: 12px;
+    margin-bottom: 10px;
+
+}
+.navbar p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.navbar button{
+    background-color: rgb(234, 6, 131);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.navbar button:hover{
+    cursor: pointer;
+}
