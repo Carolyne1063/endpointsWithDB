@@ -1,73 +1,72 @@
 <div class="whole-container">
     <div class="sidebar">
-        <div class="user">
-            <p>User Dashboard</p>
-        </div>
-        <hr>
-        <div class="profile">
-            <p>Profile</p>
-        </div>
-        <div class="logout">
-            <p>Log Out</p>
-        </div>
+      <div class="user">
+        <p>User Dashboard</p>
+      </div>
+      <hr>
+      <div class="profile">
+        <p>Profile</p>
+      </div>
+      <div class="logout">
+        <p>Log Out</p>
+      </div>
     </div>
     <div class="container">
-        <select name="" id="">
-            <option value="">Search</option>
-        </select>
+      <select name="" id="">
+        <option value="">Search</option>
+      </select>
+      <br><br>
+      <div class="welcome">
+        <div class="welcome-image">
+          <img src="https://images.pexels.com/photos/3826678/pexels-photo-3826678.jpeg?cs=srgb&dl=pexels-cottonbro-3826678.jpg&fm=jpg"
+            alt="welcome-image">
+        </div>
+        <br>
+        <div class="welcome-text">
+          <p style="font-weight: 900;">Welcome Back!</p>
+          <br>
+          <p style="color: blue; font-size: 30px; font-weight: 900;">User Name</p>
+          <br>
+          <p>Welcome to ArolNOTES, your new place to quickly jot down every idea and plan! Whether it's a fleeting thought, a burst of inspiration, or something you need to remember, ArolNOTES is here to help you capture it all. It’s super easy to write short notes about anything that pops into your head. From brilliant ideas to simple reminders, let your creativity flow and your to-do list grow. Start writing today and see how your scattered thoughts come together into something amazing! 🌟📒✨</p>
+        </div>
+        <br>
+      </div>
+      <button (click)="clearSelectedNotebook()">Create New Note</button>
+      <form class="createNoteForm" (ngSubmit)="createNotebook()" *ngIf="!selectedNotebook">
+        <label for="title">Title</label>
+        <br>
+        <input type="text" [(ngModel)]="newNotebook.title" name="title">
+        <br>
+        <label for="body">Content</label>
+        <br>
+        <textarea [(ngModel)]="newNotebook.body" name="body"></textarea>
         <br><br>
-        <div class="welcome">
-            <div class="welcome-image">
-                <img src="https://images.pexels.com/photos/3826678/pexels-photo-3826678.jpeg?cs=srgb&dl=pexels-cottonbro-3826678.jpg&fm=jpg"
-                    alt="welcome-image">
-            </div>
-            <br>
-            <div class="welcome-text">
-                <p style="font-weight: 900;">Welcome Back!</p>
-                <br>
-                <p style="color: blue; font-size: 30px; font-weight: 900;">User Name</p>
-                <br>
-                <p>Welcome to ArolNOTES, your new place to quickly jot down every idea and plan! Whether it's a fleeting
-                    thought, a burst of inspiration, or something you need to remember, ArolNOTES is here to help you
-                    capture it all. It’s super easy to write short notes about anything that pops into your head. From
-                    brilliant ideas to simple reminders, let your creativity flow and your to-do list grow. Start
-                    writing today and see how your scattered thoughts come together into something amazing! 🌟📒✨</p>
-            </div>
-            <br>
+        <button type="submit">Create</button>
+      </form>
+      <form class="createNoteForm" (ngSubmit)="updateNotebook(selectedNotebook!)" *ngIf="selectedNotebook">
+        <label for="title">Title</label>
+        <br>
+        <input type="text" [(ngModel)]="selectedNotebook!.title" name="title">
+        <br>
+        <label for="body">Content</label>
+        <br>
+        <textarea [(ngModel)]="selectedNotebook!.body" name="body"></textarea>
+        <br><br>
+        <button type="submit">Update</button>
+      </form>
+      <br><br><br>
+      <div class="note-cards">
+        <div class="note-card" *ngFor="let notebook of notebooks">
+          <h1>{{ notebook.title }}</h1>
+          <hr><br>
+          <p>{{ notebook.body }}</p>
+          <br>
+          <div class="note-card-buttons">
+            <button (click)="setSelectedNotebook(notebook)">Update</button>
+            <button (click)="deleteNotebook(notebook.id)">Delete</button>
+          </div>
         </div>
-        <button>Create New Note</button>
-        <br><br><br>
-        <div class="note-cards">
-            <div class="note-card">
-                <h1>CREDENTIALS</h1>
-                <hr><br>
-                <p>Laptop password: C12345</p>
-                <p> Phone Password: 123456C</p>
-                <p>My Id Number: 123456</p>
-                <br>
-                <div class="note-card-buttons">
-                    <button>Update</button>
-                    <button>Delete</button>
-                </div>
-            </div>
-            <div class="note-card">
-                <h1>PANCAKE RECIPE</h1>
-                <hr><br>
-                <p>
-                    First, chop your onions and tomatoes, make small cubes<br>
-                    Second, boil some water<br>
-                    Thirdly, in your bowl, pour some wheat flour, add the onions and tomatoes<br>
-                    add some eggs and the enough warm water.<br>
-                    Step Four, mix them to form a thick paste, then lastly<br>
-                    pour the mixture in the pan under regulated heat to make a pancake.
-                </p>
-                <br>
-                <div class="note-card-buttons">
-                    <button>Update</button>
-                    <button>Delete</button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-
-</div>
+  </div>
+  

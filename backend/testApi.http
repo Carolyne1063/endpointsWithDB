@@ -3,7 +3,7 @@ POST http://localhost:3000/api/notebooks
 Content-Type: application/json
 
 {
-    "title": "Sample Notebook 2",
+    "title": "Sample Notebook nature6",
     "body": "This is the body of the sample notebook."
 }
 
@@ -18,9 +18,9 @@ PUT http://localhost:3000/api/notebooks/25d5656e-2a8e-4317-bf7a-1d0b58de9d5b
 Content-Type: application/json
 
 {
-    "title": "Updated Title",
+    "title": "Updated Title to nature89",
     "body": "Updated body of the notebook."
 }
 
 ### Delete a Notebook by ID
-DELETE http://localhost:3000/api/notebooks/ede90420-78a4-45b2-8b8e-7c5638a4be4c
+DELETE http://localhost:3000/api/notebooks/ab461e67-3362-4874-b682-c2a3559ef313

@@ -83,3 +83,16 @@ button:hover{
     border: none;
     border-radius: 10px;
 }
+.createNoteForm{
+    padding: 12px;
+    width: 300px;
+    height: fit-content;
+}
+.createNoteForm button{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(234, 6, 131);
+    color: white;
+}
+    
