@@ -33,7 +33,7 @@
   "include":[
     "src/**/*"
   ],
-  "exclude": [
+  "exclude":[
     "cypress.config.ts"
   ]
 }
