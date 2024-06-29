@@ -20,4 +20,9 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a login form', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('form')).toBeTruthy();
+  });
 });

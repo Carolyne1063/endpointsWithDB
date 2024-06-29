@@ -11,6 +11,10 @@ export class NotebookService {
 
   constructor(private http: HttpClient) { }
 
+  getApiUrl(): string{
+    return this.apiUrl;
+  }
+
   createNotebook(notebook: notebook): Observable<notebook> {
     return this.http.post<notebook>(`${this.apiUrl}`, notebook);
   }
